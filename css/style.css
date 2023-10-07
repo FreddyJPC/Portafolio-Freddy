@@ -1,0 +1,572 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-snap-destination: 50% 0%; /* Cambia estos valores según tus preferencias */
+  scroll-snap-points-y: repeat(10px); /* Cambia esto para ajustar la suavidad */
+}
+
+  
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Inter', sans-serif;
+
+}
+
+.nombre-persona {
+    font-weight: 600;
+    font-size: 19px;
+    margin-top: 6px;
+  }
+  
+  .nombre-rol {
+    line-height: 26px;
+    color: #6b7280; 
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+
+.main{
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,max-content);
+    grid-template-areas: 
+    "main"
+    "proyectos"
+    "Stack"
+    "Contact";
+}
+
+
+
+.redes-sociales{
+    display: none;
+}
+.container{
+    width: 100%;
+    background-color: #fffefe;
+    position: fixed;
+    box-shadow: 0 10px 100px rgba(0,0,0,.1);
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    
+}
+.main_presentacion{
+    grid-area: main;
+}
+
+.texto1_1{
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.texto1_2{
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.texto2_2{
+    color: #4B5563;
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.Texto{
+    max-width: 400px;
+}
+
+.main_nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_links {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 500px;
+    background-color: #f1f1f1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+    transition: clip-path 0.4s, top 0.4s;
+    opacity: 0; 
+    pointer-events: none; 
+    overflow: hidden; 
+    
+}
+
+.main_links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+    top: 64px; 
+    transition: clip-path 0.4s, top 0.4s; 
+    opacity: 1; 
+    pointer-events: auto; 
+    overflow: auto;
+
+ 
+}
+
+.main_link {
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 35px;
+    font-weight: 700;
+    color: #000;
+    
+}
+
+
+.main_list{
+    list-style: none;
+}
+
+
+
+.main_icon{
+    right: 0;
+    margin-top: -10px;
+}
+
+.perfil{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.cara {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    border: 3px solid black;
+    margin-top: 60px;
+    box-shadow: #000;
+    
+}
+
+.main_tarjeta{
+    padding-left: 15%;
+    padding-bottom: 90px;
+}
+.Texto{
+    font-weight: 400;
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 25px;
+}
+
+.Cargo{
+    color: #271114;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.main_tarjeta {
+    font-weight: 400;
+    color: #333; 
+}
+
+.main_tarjeta .Cargo::before {
+    content: "DEVELOPER ";
+    font-weight: 700;
+    font-size: 25px;
+    color: #271114;
+}
+
+
+
+
+.boton-enviar-email {
+    background-color: black; 
+    color: white; 
+    font-weight: 700;
+    font-size: 14px;
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    width: 170px;
+    text-decoration: none;
+}
+
+.icono-correo {
+    margin-right: 10px;
+    height: 20px; 
+}
+
+.main_proyectos{
+    background-color: #f1f1f1;
+
+}
+
+.texto1{
+    font-weight: 700;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 60px;
+}
+.texto2 {
+    margin-top: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.imgpro{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+
+
+}
+.imagen-proyecto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto_stack{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.contenedor_stack{
+    background-color: #f1f1f1;
+}
+
+
+.Stack{
+    background-color: #f1f1f1;
+
+}
+
+.galeria {
+    
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-left: 60px;
+}
+
+.imagenl {
+    background-color: white;
+    text-align: center;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 20px;
+}
+
+.imagenl img {
+    border-radius: 20px;
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main_contacto{
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.formulario {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.campo {
+    margin: 10px 0;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.boton {
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.texto2{
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4B5563;
+
+}
+
+.campo3{
+    margin: 10px 0;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+footer {
+    border-top: 1px solid white; 
+    background-color: #f1f1f1;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: left;
+}
+
+.nombre_footer{
+    font-weight: 700;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.nombre {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.redes-sociales img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.redes-sociales a {
+    text-decoration: none; 
+}
+
+.redes-socialess a {
+    text-decoration: none; 
+}
+
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        padding-left: 10%;
+        padding-right: 10%;
+        box-shadow: none;
+    }
+
+    .contenedordelperfil {
+        display: flex;
+        flex-direction: row-reverse;
+
+}
+
+.perfil{
+    margin-left: 200px;
+}
+.main_tarjeta{
+    padding-top:  150px;
+    margin-left: 100px;
+}
+.cara{
+    width: 400px;
+    height: auto;
+    margin-top: 10px;
+
+}
+.main_icon{
+    display: none;
+
+}
+
+.main_links {
+    position: static;
+    padding: 0;
+    margin-top: 0px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    margin-right: 10%;
+    clip-path: none;
+    transition: none;
+    background-color: white;
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.main_list{
+    list-style: none;
+}
+
+.main_link{
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.contenedor_redes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes-sociales{
+    display:block;
+    margin-top: 18px;
+
+}
+
+
+.ingreso{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.texto1 {
+    font-weight: 700;
+    font-size: 120px;
+    padding-top: 50px;
+    text-align: start;
+}
+
+.texto2 {
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 5px;
+    text-align: start;
+}
+
+
+
+.Stack{
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.texto_stack{
+    font-weight: 700;
+    font-size: 100px;
+    padding-top: 70px;
+    text-align: start;
+
+}
+
+.galeria{
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 80px;
+    padding: 60px;
+    margin-left: 0px;
+    padding-left: 20px;
+
+}
+
+.imagenl {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.texto1_1{
+    font-weight: 700;
+    font-size: 100px;
+    padding-top: 20px;
+    width: 60%;
+    text-align: start;
+}
+
+.texto1_2{
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    width: 60%;
+    text-align: start;
+}
+
+.texto2_2{
+    font-weight: 400;
+    font-size: 20px;
+    width: 60%;
+    text-align: start;
+    color: #4B5563;
+    padding-bottom: 50px;
+}
+
+.formulario{
+    width: 60%;
+    margin: 0 auto;    
+}
+.contenedor_redes{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nombre_footer{
+    font-weight: 700;
+    font-size: 15px;
+}
+}
+
+.Cargo{
+    color: #111827;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.main_tarjeta {
+    margin-top: 50px;
+    font-weight: 400;
+    color: #333; 
+}
+
+.main_tarjeta .Cargo::before {
+    content: "DEVELOPER ";
+    font-weight: 700;
+    font-size: 36px;
+    color: #111827;
+}
+
+
